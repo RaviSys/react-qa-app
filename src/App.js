@@ -1,4 +1,8 @@
+import React from 'react';
+
+import Layout from './components/UI/Layout';
 import Questions from './components/questions/Questions';
+import NewQuestion from './components/questions/NewQuestion/NewQuestion';
 
 function App() {
   const questions = [
@@ -11,12 +15,13 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <Layout>
+      <header className="App-header mb-4">
         <h1 className="heading-text">Welcome to AppsImpact Academy</h1>
       </header>
+      <NewQuestion />
       <Questions items={questions} />
-    </div>
+    </Layout>
   );
 }
 
