@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const QuestionForm = () => {
+const QuestionForm = (props) => {
 
   const [ enterdQuestion, setEnteredQuestion ] = useState('');
 
@@ -16,7 +16,8 @@ const QuestionForm = () => {
       title: enterdQuestion
     }
 
-    console.log(questionData);
+    props.onSaveQuestionData(questionData);
+    // console.log(questionData);
     setEnteredQuestion('');
   }
 

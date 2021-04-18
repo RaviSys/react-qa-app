@@ -6,20 +6,42 @@ import NewQuestion from './components/questions/NewQuestion/NewQuestion';
 
 function App() {
   const questions = [
-    {title: 'How to create a new react application?'},
-    {title: 'What are components in React?'},
-    {title: 'What are the main aspects of components?'},
-    {title: 'What are props in React?'},
-    {title: 'What is State in ReactJs?'},
-    {title: 'What is the difference between state and props in ReactJs?'}
+    {
+      id: 'q1',
+      title: 'How to create a new react application?'
+    },
+    {
+      id: 'q2',
+      title: 'What are components in React?'
+    },
+    {
+      id: 'q3',
+      title: 'What are the main aspects of components?'
+    },
+    {
+      id: 'q4',
+      title: 'What are props in React?'
+    },
+    {
+      id: 'q5',
+      title: 'What is State in ReactJs?'
+    },
+    {
+      id: 'q6',
+      title: 'What is the difference between state and props in ReactJs?'
+    }
   ];
+
+  const addQuestionHandler = (question) => {
+    console.log(question);
+  }
 
   return (
     <Layout>
       <header className="App-header mb-4">
         <h1 className="heading-text">Welcome to AppsImpact Academy</h1>
       </header>
-      <NewQuestion />
+      <NewQuestion onAddQuestion={addQuestionHandler} />
       <Questions items={questions} />
     </Layout>
   );
