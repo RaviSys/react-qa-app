@@ -16,7 +16,8 @@ const QuestionForm = () => {
       title: enterdQuestion
     }
 
-    console.log(questionData)
+    console.log(questionData);
+    setEnteredQuestion('');
   }
 
   return (
@@ -24,7 +25,11 @@ const QuestionForm = () => {
       <div>
         <div className="form-group">
           <label>Title</label>
-          <input type="text" className="form-control form-control-lg" onChange={questionChangeHandler}/>
+          <input 
+            type="text" 
+            className="form-control form-control-lg"
+            value={enterdQuestion}
+            onChange={questionChangeHandler}/>
         </div>
       </div>
       <div className="form-group">
