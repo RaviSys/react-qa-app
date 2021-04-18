@@ -1,12 +1,17 @@
 import React from 'react';
 
 const QuestionForm = () => {
+
+  const questionChangeHandler = (event) => {
+    console.log(event.target.value);
+  }
+
   return (
     <form>
       <div>
         <div className="form-group">
           <label>Title</label>
-          <input type="text" className="form-control form-control-lg"/>
+          <input type="text" className="form-control form-control-lg" onChange={questionChangeHandler}/>
         </div>
       </div>
       <div className="form-group">
