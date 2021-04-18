@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const QuestionForm = () => {
 
+  const [ enterdQuestion, setEnteredQuestion ] = useState('');
+
   const questionChangeHandler = (event) => {
-    console.log(event.target.value);
+    setEnteredQuestion(event.target.value);
   }
 
   return (
