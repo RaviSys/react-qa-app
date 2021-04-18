@@ -8,8 +8,19 @@ const QuestionForm = () => {
     setEnteredQuestion(event.target.value);
   }
 
+  // Submit handler for question form
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const questionData = {
+      title: enterdQuestion
+    }
+
+    console.log(questionData)
+  }
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div>
         <div className="form-group">
           <label>Title</label>
