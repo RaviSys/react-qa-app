@@ -29,6 +29,10 @@ function App() {
     {
       id: 'q6',
       title: 'What is the difference between state and props in ReactJs?'
+    },
+    {
+      id: 'q7',
+      title: 'What is the difference between stateful and stateless components in ReactJs?'
     }
   ];
 
