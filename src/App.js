@@ -32,6 +32,10 @@ const DUMMY_QUESTIONS = [
   {
     id: 'q7',
     title: 'What is the difference between stateful and stateless components in ReactJs?'
+  },
+  {
+    id: 'q8',
+    title: 'What are keys in React and why are they important?'
   }
 ];
 function App() {
