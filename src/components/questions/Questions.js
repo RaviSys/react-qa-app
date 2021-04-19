@@ -1,12 +1,31 @@
+import React, { useState } from 'react';
 import QuestionItem from './QuestionItem';
+import QuestionFilter from './Filters/QuestionFilter';
 
 function Questions(props) {
+
+  const [filteredCategory, setFilteredCategory] = useState('all');
+
+  const filterChangeHandler = (selectedCategory) => {
+    setFilteredCategory(selectedCategory)
+  }
+
+  const filteredQuestions = props.items.filter((question) => {
+    if (filteredCategory === "all") {
+      return question;
+    } else {
+      return question.category === filteredCategory;
+    }
+  })
+
   return (
     <div>
-      {props.items.map((question) => (
+      <QuestionFilter selected={filteredCategory} onChangeSelected={filterChangeHandler}/>
+      {filteredQuestions.map((question) => (
         <QuestionItem 
           key={question.id}
-          title={question.title} />
+          title={question.title}
+          category={question.category} />
       ))}
     </div>
   )
