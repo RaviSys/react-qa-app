@@ -47,17 +47,37 @@ const DUMMY_QUESTIONS = [
   },
   {
     id: 'q9',
-    title: 'What are class and objects in Ruby?',
+    title: 'What is ORM?',
     category: 'Ruby'
   }, 
   {
     id: 'q10',
-    title: 'What are singleton classes in Ruby?',
+    title: 'What are the most important properties of Active Record?',
     category: 'Ruby'
   },
   {
     id: 'q11',
-    title: 'What are modules and mixins in Ruby?',
+    title: 'What is the difference between find() and find_by()?',
+    category: 'Ruby'
+  },
+  {
+    id: 'q12',
+    title: 'What are the multivalue methods for Active Record Relation?',
+    category: 'Ruby'
+  },
+  {
+    id: 'q13',
+    title: 'What are the single value methods for Active Record Relation?',
+    category: 'Ruby'
+  },
+  {
+    id: 'q14',
+    title: 'What is the difference between delete_all and destroy_all methods?',
+    category: 'Ruby'
+  },
+  {
+    id: 'q15',
+    title: 'What are the similarities and differences between has_many: :through and has_and_belongs_to_many association?',
     category: 'Ruby'
   }
 ];
