@@ -13,6 +13,7 @@ const QuestionFilter = (props) => {
               <option value="all">All</option>
               <option value="React Js">React Js</option>
               <option value="Ruby">Ruby</option>
+              <option value="Javascript">Javascript</option>
             </select>
           </div>
         </div>

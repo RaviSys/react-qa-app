@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import QuestionItem from './QuestionItem';
 import QuestionFilter from './Filters/QuestionFilter';
+import NoQuestion from './NoQuestion/NoQuestion';
 
 function Questions(props) {
 
@@ -18,15 +19,22 @@ function Questions(props) {
     }
   })
 
+  let questionContent = <NoQuestion />;
+
+  if(filteredQuestions.length > 0) {
+    questionContent = filteredQuestions.map((question) => (
+      <QuestionItem 
+        key={question.id}
+        title={question.title}
+        answer={question.answer}
+        category={question.category} />
+    ))
+  }
+
   return (
     <div>
       <QuestionFilter selected={filteredCategory} onChangeSelected={filterChangeHandler}/>
-      {filteredQuestions.map((question) => (
-        <QuestionItem 
-          key={question.id}
-          title={question.title}
-          category={question.category} />
-      ))}
+      {questionContent}
     </div>
   )
 }
